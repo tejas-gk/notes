@@ -4,6 +4,7 @@ import Main from './components/Main/Main'
 import { useEffect, useState } from 'react'
 import uuid from 'react-uuid'
 import styles from './App.css'
+
 interface Note {
   id: string;
   title: string;
@@ -53,6 +54,7 @@ export default function Home() {
    useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
+
 
 
   return (
