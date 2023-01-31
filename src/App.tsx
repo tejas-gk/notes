@@ -71,7 +71,7 @@ export default function Home() {
             setActiveNote={setActiveNote}
           />
       </section>
-      <main className={styles.main}>
+      <main>
           <Main
             activeNote={getActiveNote()}
             onUpdateNote={onUpdateNote}
