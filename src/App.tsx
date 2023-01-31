@@ -31,6 +31,7 @@ export default function Home() {
     }
   
   const onDeleteNote = (id: string) => {
+    // @ts-ignore
     setNotes(notes.filter((note) => note.id !== id))
     console.log(id)
   }
@@ -41,6 +42,7 @@ export default function Home() {
   }
 
   const onUpdateNote = (updatedNote: Note) => {
+    // @ts-ignore
     const updatedNotesArray = notes.map((note) => {
       // @ts-ignore
       if (note.id === updatedNote.id) {
