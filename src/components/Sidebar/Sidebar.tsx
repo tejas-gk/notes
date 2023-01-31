@@ -45,10 +45,10 @@ export default function Sidebar({
                   </div>
               </div>
               <div className='app-sidebar-notes h-[calc(100vh-78vh)]' >
-                    <Folder
+                    {/* <Folder
                 handleInsertNode={handleInsertNode}
                 explorer={explorerData}
-          />
+          /> */}
               {
                   sortedNotes?.map(({ id, title, body, lastModified }:any,key:number) => (
                       <div className={`sidebar-notes cursor-pointer p-4  hover:bg-black
