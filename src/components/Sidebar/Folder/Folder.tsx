@@ -3,6 +3,7 @@ import {useState} from 'react'
 interface FolderProps {
     explorer: any;
     handleInsertNode: (folderId: number, item: any, isFolder: boolean) => void;
+    onClick: (id: number) => void;
 }
 
 type ShowInput = {
@@ -13,7 +14,8 @@ type ShowInput = {
 
 export default function Folder({
     explorer,
-    handleInsertNode
+    handleInsertNode,
+    onClick
 }: FolderProps) {
     const [expand, setExpand] = useState<boolean>(false)
     const [showInput, setShowInput] = useState<ShowInput>({
@@ -83,7 +85,8 @@ export default function Folder({
               <Folder
                 handleInsertNode={handleInsertNode}
                 key={child.id}
-                explorer={child}
+                    explorer={child}
+                    onClick={onClick}
               />
             );
           })}
@@ -95,7 +98,12 @@ export default function Folder({
   else return (
       <div>
           <div className='mt-2'>
-              <div className='flex flex-row'>
+             <div
+                 onClick={() => {
+                     onClick(explorer.id)
+                 }}
+                     
+                 className='flex flex-row'>
                   <span className='text-white'>
                       📄 {explorer.name}
                       </span>

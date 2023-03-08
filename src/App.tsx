@@ -1,7 +1,7 @@
 
 import Sidebar from './components/Sidebar/Sidebar'
 import Main from './components/Main/Main'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import uuid from 'react-uuid'
 import styles from './App.css'
 
@@ -57,6 +57,23 @@ export default function Home() {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
+  const isMobile = () => {
+    return window.innerWidth <= 800;
+  };
+
+  if (isMobile()) {
+    return (
+      <div className="
+      flex flex-col items-center justify-center h-screen
+      ">
+        <p className="text-2xl font-bold">Note App</p>
+        <p className="text-sm px-3">
+
+          This app works best on a desktop or laptop. Please open it on a larger screen.
+        </p>
+      </div>
+    );
+  }
 
 
   return (
