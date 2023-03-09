@@ -33,9 +33,12 @@ export default function Sidebar({
 
   console.log(explorerData)
   return (
-    <div>
+    <div
+    className='scrollbar scrollbar-thumb-gray-800 scrollbar-track-gray-600 scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full overflow-y-scroll'
+    >
 
-      <div className="flex flex-col  w-64 h-screen bg-[#2c2c38]">
+      <div className="flex flex-col  w-64 min-h-screen bg-[#2c2c38]  border-r 
+      ">
         <div className="sidebar-header flex flex-row items-center justify-between w-full h-20 bg-gray-900">
           <h1 className="text-2xl font-bold text-white pl-5">Notes</h1>
           <div className='text-white pr-10'>
@@ -44,7 +47,7 @@ export default function Sidebar({
             >Add</button>
           </div>
         </div>
-        <div className='app-sidebar-notes h-[calc(100vh-78vh)]' >
+        <div className='app-sidebar-notes min-h-screen' >
           {/* <Folder
             handleInsertNode={handleInsertNode}
             explorer={explorerData}
