@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-   overflow: hidden;
+body {
+    overflow: hidden;
 }
-.scrollbar{
-   scrollbar-width: thin;
-   scrollbar-color: #4f46e5 #e5e7eb;
-   scrollbar-width: thin;
+.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4f46e5 #e5e7eb;
+    scrollbar-width: thin;
 }
-

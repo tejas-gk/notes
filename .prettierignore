@@ -1,0 +1,16 @@
+node_modules
+package.json
+package-lock.json
+README.md
+prisma
+dist
+.eslintrc.json
+.gitignore
+.prettierrc
+tsconfig.json
+.env
+postcss.config.js
+tailwind.config.js
+/*
+!src/
+```
